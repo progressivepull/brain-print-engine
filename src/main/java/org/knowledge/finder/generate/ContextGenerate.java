@@ -21,16 +21,7 @@ public class ContextGenerate {
     private String outputFileName;
     private String projectName;
     
-    private int sectionCounter = 1;
-    private int subsectionCounter = 1;
-    
    
-    /**
-     * Constructs a FileConverter with specified input and output file names.
-     * @param inputFile  the input file path
-     * @param outputFile the output file path
-     * @param projectAuthorName  is the name of the Author and Folder where all folder and files are located
-     */
     public ContextGenerate(String inputFileName, String outputFileName, String projectName) {
         this.inputFileName = inputFileName;
         this.outputFileName = outputFileName;
@@ -47,21 +38,15 @@ public class ContextGenerate {
     public String getProjectName() {return projectName;}
 	public void setProjectName(String projectName) {this.projectName = projectName;}
 
-	/**
-     * Determines if the line is a section heading.
-     * @param line the line to check
-     * @return true if it's a section heading, false otherwise
-     */
+
     public boolean isSectionHeading(String line) {
         return line.startsWith("# ");
     }
 
 
 
-	/**
-     * Starts the file conversion process.
-     */
-    public void convert() {
+
+    public void process() {
         logger.info("Starting file conversion from '" + inputFileName + "' to '" + outputFileName + "'");
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
              BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
@@ -71,13 +56,10 @@ public class ContextGenerate {
             	
                 if (isSectionHeading(line)) {
                 	
-                	String prefixLabel = line.replace("#", "#" + sectionCounter + "." );
-                	
-                	writer.write( prefixLabel + "\n \r");
-                	sectionCounter++;
+                	handleHeading(line, writer);
                     
                 } else {
-                	processLesson(line, writer);
+                	handleLesson(line, writer);
                 } 
 
             }
@@ -88,10 +70,13 @@ public class ContextGenerate {
         }
     }
     
-    public void processLesson(String line, BufferedWriter writer) {
+    public void handleLesson(String line, BufferedWriter writer) {
     	
     	
-    	subsectionCounter++;
+    	
+    }
+    
+    public void handleHeading(String line, BufferedWriter writer) throws IOException {
     	
     }
     

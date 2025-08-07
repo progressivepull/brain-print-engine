@@ -12,7 +12,7 @@ public class ManagerGenerate {
 	}
 	
 	public void process() {
-		contextGenerate.convert();	
+		contextGenerate.process();	
 	}
 	
 

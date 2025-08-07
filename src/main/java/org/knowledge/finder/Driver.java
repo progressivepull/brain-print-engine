@@ -9,7 +9,7 @@ public class Driver {
 		String[] archivefiles = { "conversion.log", "context.md", "application.log" };
 		String archiveDir = "archive";
 
-		String inputFile = "webpage1.txt";
+		String inputFile = "webpage.txt";
 		String outputFile = "context.md";
 
 		String projectName = "How to Research and Write Using Generative AI Tools";
