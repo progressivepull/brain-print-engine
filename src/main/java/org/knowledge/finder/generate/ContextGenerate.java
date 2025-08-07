@@ -55,10 +55,10 @@ public class ContextGenerate {
             	
                 if (isSectionHeading(line)) {
                 	
-                	handleHeading();
+                	handleHeading(line);
                     
                 } else {
-                	handleLesson();
+                	handleLesson(line);
                 } 
 
             }
@@ -75,13 +75,13 @@ public class ContextGenerate {
     	
     }
     
-    public void handleLesson() {
+    public void handleLesson(String line) {
     	
     	
     	
     }
     
-    public void handleHeading() throws IOException {
+    public void handleHeading(String line) throws IOException {
     	
     }
     
