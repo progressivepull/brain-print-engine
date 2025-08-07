@@ -44,22 +44,21 @@ public class ContextGenerate {
     }
 
 
-
-
     public void process() {
-        logger.info("Starting file conversion from '" + inputFileName + "' to '" + outputFileName + "'");
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
+       
+        createContext();
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName));) {
         	
             String line;
             while ((line = reader.readLine()) != null) {
             	
                 if (isSectionHeading(line)) {
                 	
-                	handleHeading(line, writer);
+                	handleHeading();
                     
                 } else {
-                	handleLesson(line, writer);
+                	handleLesson();
                 } 
 
             }
@@ -70,13 +69,19 @@ public class ContextGenerate {
         }
     }
     
-    public void handleLesson(String line, BufferedWriter writer) {
+    public void createContext() {
+    	
+    	logger.info("Starting file conversion from '" + inputFileName + "' to '" + outputFileName + "'");
+    	
+    }
+    
+    public void handleLesson() {
     	
     	
     	
     }
     
-    public void handleHeading(String line, BufferedWriter writer) throws IOException {
+    public void handleHeading() throws IOException {
     	
     }
     
