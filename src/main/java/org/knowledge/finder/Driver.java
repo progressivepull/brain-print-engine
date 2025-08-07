@@ -12,7 +12,7 @@ public class Driver {
 		String inputFile = "webpage.txt";
 		String outputFile = "context.md";
 
-		String projectName = "How to Research and Write Using Generative AI Tools";
+		String projectName = "Use For Development";
 
 		String contextHyperLink= "## [Context](./../context.md)";
 		
