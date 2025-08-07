@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Driver {
+public class CleanInputFile {
 
 	public static void main(String[] args) {
         // Set input and output file paths

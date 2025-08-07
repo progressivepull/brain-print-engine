@@ -1,0 +1,621 @@
+# Introduction
+Hands-on development in AWS: Introduction(Viewed)
+2m 59s video
+
+Save
+
+# Lesson 1: Course and AWS Overview
+Module 1: Course and AWS overview introduction(Viewed)
+21s video
+
+Save
+Learning objectives(Viewed)
+17s video
+
+Save
+Course overview(Viewed)
+7m 41s video
+
+Save
+Requisites overview(Viewed)
+2m 3s video
+
+Save
+
+# Lesson 2: Cloud Services
+Learning objectives(Viewed)
+30s video
+
+Save
+Why move to the cloud(Viewed)
+9m 32s video
+
+Save
+Exploring cloud providers(Viewed)
+6m 6s video
+
+Save
+A history of AWS(Viewed)
+5m 18s video
+
+Save
+A high-level view of AWS services(Viewed)
+6m video
+
+Save
+Exploring AWS regions(Viewed)
+3m 43s video
+
+Save
+
+# Lesson 3: Setting Up a Lab
+Learning objectives(Viewed)
+25s video
+
+Save
+Setting up a local computer(Viewed)
+4m 31s video
+
+Save
+Creating an AWS trial account(Viewed)
+7m 21s video
+
+Save
+Understanding AWS CLI vs. web GUI(Viewed)
+4m 9s video
+
+Save
+Using the AWS CLI(Viewed)
+9m 41s video
+
+Save
+Reviewing the course’s code repo(Viewed)
+8m 50s video
+
+Save
+
+# Lesson 4: Identity and Access Management (IAM)
+Module 2: AWS foundational services introduction(Viewed)
+24s video
+
+Save
+Learning objectives
+32s video
+
+Save
+Understanding IAM
+11m 55s video
+
+Save
+Understanding permissions
+11m 37s video
+
+Save
+Exploring users and groups
+8m 58s video
+
+Save
+Exploring roles
+5m 13s video
+
+Save
+Using IAM multi-factor authentication (MFA)
+4m 18s video
+
+Save
+Creating a Cognito user pool
+15m 12s video
+
+Save
+
+# Lesson 5: Virtual Private Cloud (VPC)
+Learning objectives
+22s video
+
+Save
+Understanding VPC
+9m 24s video
+
+Save
+Exploring networking and security
+7m 9s video
+
+Save
+Understanding default VPC
+7m 17s video
+
+Save
+Creating a VPC
+15m 22s video
+
+Save
+
+# Lesson 6: Elastic Compute Cloud (EC2)
+Learning objectives
+25s video
+
+Save
+Understanding EC2
+8m 11s video
+
+Save
+Provisioning instances
+14m 19s video
+
+Save
+Using Amazon Machine Images (AMI) marketplace
+13m 59s video
+
+Save
+Understanding elastic IPs
+8m 3s video
+
+Save
+Using load balancers
+9m 50s video
+
+Save
+Exploring storage
+6m 13s video
+
+Save
+
+# Lesson 7: Databases (RDS and EC2)
+Module 3: Database and storage services introduction
+19s video
+
+Save
+Learning objectives
+27s video
+
+Save
+An RDS overview
+8m 47s video
+
+Save
+Understanding database security in RDS
+2m 48s video
+
+Save
+Configuring an RDS database
+9m 9s video
+
+Save
+Scaling RDS
+4m 30s video
+
+Save
+Exploring database on EC2
+5m 12s video
+
+Save
+Using RDS best practices
+2m 16s video
+
+Save
+
+# Lesson 8: DynamoDB (NoSQL)
+Learning objectives
+22s video
+
+Save
+Understanding DynamoDB
+13m 28s video
+
+Save
+Exploring DDB data models
+2m 20s video
+
+Save
+Securing DynamoDB
+12m video
+
+Save
+Scaling and replication
+12m 54s video
+
+Save
+Understanding streams and triggers
+8m 12s video
+
+Save
+Using DynamoDB best practices
+2m 40s video
+
+Save
+
+# Lesson 9: Simple Storage Service (S3)
+Learning objectives
+23s video
+
+Save
+Understanding S3
+10m 42s video
+
+Save
+Creating buckets
+12m 17s video
+
+Save
+Securing S3
+7m 33s video
+
+Save
+Using global data replication
+6m 11s video
+
+Save
+Understanding Glacier
+5m 34s video
+
+Save
+Exploring events
+8m 48s video
+
+Save
+Using third-party browser tools
+2m 34s video
+
+Save
+Using S3 best practices
+2m 47s video
+
+Save
+Using CloudFront with S3
+16m 18s video
+
+Save
+
+# Lesson 10: Route 53 DNS
+Learning objectives
+24s video
+
+Save
+Understanding Route 53
+4m 54s video
+
+Save
+Exploring Route 53 zones
+5m 31s video
+
+Save
+Using zone aliases
+4m 23s video
+
+Save
+Configuring traffic flow policies
+6m 48s video
+
+Save
+Using Route 53 best practices
+3m 14s video
+
+Save
+
+# Lesson 11: Simple Queue Service (SQS)
+Module 4: Messaging services introduction
+29s video
+
+Save
+Learning objectives
+31s video
+
+Save
+Understanding SQS
+10m 25s video
+
+Save
+Creating an SQS queue
+3m 39s video
+
+Save
+Securing SQS
+5m 53s video
+
+Save
+Interacting with an SQS queue
+12m 32s video
+
+Save
+Using message encryption
+4m 42s video
+
+Save
+Using SQS best practices
+2m 36s video
+
+Save
+
+# Lesson 12: Simple Notification Service (SNS)
+Learning objectives
+30s video
+
+Save
+An SNS overview
+4m 47s video
+
+Save
+Exploring SNS transports
+2m 51s video
+
+Save
+Understanding SNS message reliability
+1m 58s video
+
+Save
+Using SNS platform applications
+2m 57s video
+
+Save
+Emailing and texting using SNS
+4m 22s video
+
+Save
+Using SNS best practices
+1m 5s video
+
+Save
+
+# Lesson 13: Simple Email Service (SES)
+Learning objectives
+27s video
+
+Save
+Understanding SES
+6m 21s video
+
+Save
+Using the SES simulator
+8m 9s video
+
+Save
+Using SES templates
+3m 49s video
+
+Save
+Using SES best practices
+1m 39s video
+
+Save
+
+# Lesson 14: Lambda – Serverless Compute
+Module 5: Execution services introduction
+24s video
+
+Save
+Learning objectives
+27s video
+
+Save
+Highlighting Lambda
+6m 6s video
+
+Save
+Understanding Lambda scalability and availability
+3m 24s video
+
+Save
+Exploring Lambda security
+3m 43s video
+
+Save
+Using Lambda functions
+10m 42s video
+
+Save
+Deploying a Lambda function
+8m 32s video
+
+Save
+Using Lambda best practices
+5m 8s video
+
+Save
+
+# Lesson 15: Elastic Beanstalk
+Learning objectives
+43s video
+
+Save
+Understanding Elastic Beanstalk
+4m 49s video
+
+Save
+Development stacks
+4m 41s video
+
+Save
+Interacting with databases
+5m 43s video
+
+Save
+Updating the platform
+5m 28s video
+
+Save
+Using Elastic Beanstalk best practices
+1m 17s video
+
+Save
+
+# Lesson 16: Kinesis
+Learning objectives
+27s video
+
+Save
+Understanding Kinesis
+6m 4s video
+
+Save
+Exploring streams
+3m 17s video
+
+Save
+Using Firehose
+4m 45s video
+
+Save
+Using Kinesis best practices
+2m 6s video
+
+Save
+
+# Lesson 17: API Gateway
+Learning objectives
+35s video
+
+Save
+An API Gateway overview
+10m 24s video
+
+Save
+Creation from template
+4m 15s video
+
+Save
+Using Lambda integrations
+10m 33s video
+
+Save
+Integrating using HTTP
+5m 24s video
+
+Save
+Securing an API Gateway
+5m 10s video
+
+Save
+Using API Gateway best practices
+2m 34s video
+
+Save
+
+# Lesson 18: AWS API
+Module 6: Developing in AWS introduction
+27s video
+
+Save
+Learning objectives
+28s video
+
+Save
+An AWS API overview
+4m 5s video
+
+Save
+Using the AWS API
+3m video
+
+Save
+
+# Lesson 19: AWS SDK
+Learning objectives
+33s video
+
+Save
+Understanding the AWS SDKs
+2m 31s video
+
+Save
+Finding documentation
+6m 49s video
+
+Save
+Using the Node.js SDK
+3m 52s video
+
+Save
+Using the Python SDK
+1m 31s video
+
+Save
+
+# Lesson 20: CloudFormation
+Learning objectives
+29s video
+
+Save
+Understanding CloudFormation
+6m 12s video
+
+Save
+Using templates
+6m 8s video
+
+Save
+Using CloudFormation best practices
+2m 51s video
+
+Save
+
+# Lesson 21: CloudWatch
+Learning objectives
+27s video
+
+Save
+Understanding CloudWatch
+6m 32s video
+
+Save
+Exploring logs
+4m 7s video
+
+Save
+Understanding alarms
+6m 50s video
+
+Save
+Using insights
+3m 27s video
+
+Save
+Using EventBridge
+4m 28s video
+
+Save
+
+# Lesson 22: Elastic Container Service (ECS)
+Learning objectives
+24s video
+
+Save
+Understanding ECS
+8m 51s video
+
+Save
+Exploring the Elastic Container Registry
+3m 43s video
+
+Save
+Using clusters
+4m 22s video
+
+Save
+Using ECS best practices
+2m 9s video
+
+Save
+
+# Lesson 23: AWS Developer Tools
+Learning objectives
+42s video
+
+Save
+Outlining AWS developer tools
+10m 20s video
+
+Save
+Experimenting with AWS developer tools
+20m 18s video
+
+Save
+Exploring X-Ray
+8m 22s video
+
+Save
+
+# Conclusion
+Hands-on development in AWS: Summary
+1m 1s video
+
+Save
