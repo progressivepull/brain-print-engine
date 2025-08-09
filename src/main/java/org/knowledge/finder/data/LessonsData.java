@@ -9,8 +9,10 @@ public class LessonsData {
     private final Map<Integer, String> titles = new HashMap<>();
     private final Map<String, String> lessons = new HashMap<>();
     
-    private Integer section = 1;
-    private String subSection = "1.1";
+    private Integer section = 0;
+    private String subSection = "0.1";
+    
+    boolean isNewSection = false;
     
 	
     private Map<Integer, Integer> lessonsCount = new HashMap<>();
@@ -35,19 +37,27 @@ public class LessonsData {
     public void setProjectName(String projectName) {this.projectName = sanitize(projectName);}
     
     public void setTitle(String titleSection) {
-    	titles.put(section, sanitize(titleSection));
+    	
     	section++;
+    	
+    	String title =  sanitize(titleSection).replace("#", "# " + section + ".");
+    	
+    	titles.put(section, title);
+    	isNewSection = true;
     }
     
     public Map<Integer, String> getTitles() { return titles;}
     
 
-    public void setLessons(String lessonContent, boolean isNewSection) {
+    public void setLessons(String lessonContent) {
     	
     	if(isNewSection) {
     		increaseSubSection(DecimalPoint.WHOLE);
+    		isNewSection = false;
     	}
-    	lessons.put(subSection, sanitize(lessonContent));
+    	
+    	String lesson = subSection +" " + sanitize(lessonContent);
+    	lessons.put(subSection, lesson);
     	increaseSubSection(  DecimalPoint.DECIMAL  );
     }
     
@@ -119,7 +129,10 @@ public class LessonsData {
     	
         for (Map.Entry<Integer, Integer> entry : lessonsCount.entrySet()) {
         	
-        	System.out.println(entry.getKey() +":" + entry.getValue() );
+        	if(entry.getKey() > 0) {
+        	
+        	  System.out.println(entry.getKey() +":" + entry.getValue() );
+        	}
         }
     }
 }

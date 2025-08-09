@@ -13,10 +13,12 @@ public class Driver {
 		String outputFile = "context.md";
 
 		String projectName = "Use For Development";
+		
+		String lessonFolderName = "LESSON_";
 
 		String contextHyperLink= "## [Context](./../context.md)";
 		
-		ManagerGenerate contextGenerate = new ManagerGenerate( archivefiles, archiveDir, inputFile, outputFile, projectName,contextHyperLink);
+		ManagerGenerate contextGenerate = new ManagerGenerate( archivefiles, archiveDir, inputFile, outputFile, projectName,lessonFolderName,contextHyperLink);
 		
 		contextGenerate.process();
 			
