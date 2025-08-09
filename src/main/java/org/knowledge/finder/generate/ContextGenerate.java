@@ -174,7 +174,7 @@ public class ContextGenerate {
             		
                     String fileName = line.replace(" ", "_") + ".md";
                     Path markdownFilePath = subfolderPath.resolve(fileName);
-                    String fileContent = "# " + fileName.replace("_", " ") + " \n \r \n \r " + contextLinkPage;
+                    String fileContent = "# " + line.replace("_", " ") + " \n \r \n \r " + contextLinkPage;
 
                     // Use try-with-resources for BufferedWriter and FileWriter
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(markdownFilePath.toFile()))) { 
