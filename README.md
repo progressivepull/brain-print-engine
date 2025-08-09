@@ -1,6 +1,11 @@
 # brain-print-engine
 
-[regular expression 101](https://regex101.com/)
+# Notes
+* I had to remove all colons (:) from the webpage.txt file.
+
+# References
+* [regular expression 101](https://regex101.com/)
+* [regexr](https://regexr.com/)
 
 # ✅ Java Program: Match "3m 27s video"
 

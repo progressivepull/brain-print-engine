@@ -1,26 +1,26 @@
 # Introduction
-Hands-on development in AWS: Introduction
-# Lesson 1: Course and AWS Overview
-Module 1: Course and AWS overview introduction
+Hands-on development in AWS Introduction
+# Lesson 1 Course and AWS Overview
+Module 1 Course and AWS overview introduction
 Learning objectives
 Course overview
 Requisites overview
-# Lesson 2: Cloud Services
+# Lesson 2 Cloud Services
 Learning objectives
 Why move to the cloud
 Exploring cloud providers
 A history of AWS
 A high-level view of AWS services
 Exploring AWS regions
-# Lesson 3: Setting Up a Lab
+# Lesson 3 Setting Up a Lab
 Learning objectives
 Setting up a local computer
 Creating an AWS trial account
 Understanding AWS CLI vs. web GUI
 Using the AWS CLI
 Reviewing the course’s code repo
-# Lesson 4: Identity and Access Management (IAM)
-Module 2: AWS foundational services introduction
+# Lesson 4 Identity and Access Management (IAM)
+Module 2 AWS foundational services introduction
 Learning objectives
 Understanding IAM
 Understanding permissions
@@ -28,13 +28,13 @@ Exploring users and groups
 Exploring roles
 Using IAM multi-factor authentication (MFA)
 Creating a Cognito user pool
-# Lesson 5: Virtual Private Cloud (VPC)
+# Lesson 5 Virtual Private Cloud (VPC)
 Learning objectives
 Understanding VPC
 Exploring networking and security
 Understanding default VPC
 Creating a VPC
-# Lesson 6: Elastic Compute Cloud (EC2)
+# Lesson 6 Elastic Compute Cloud (EC2)
 Learning objectives
 Understanding EC2
 Provisioning instances
@@ -42,8 +42,8 @@ Using Amazon Machine Images (AMI) marketplace
 Understanding elastic IPs
 Using load balancers
 Exploring storage
-# Lesson 7: Databases (RDS and EC2)
-Module 3: Database and storage services introduction
+# Lesson 7 Databases (RDS and EC2)
+Module 3 Database and storage services introduction
 Learning objectives
 An RDS overview
 Understanding database security in RDS
@@ -51,7 +51,7 @@ Configuring an RDS database
 Scaling RDS
 Exploring database on EC2
 Using RDS best practices
-# Lesson 8: DynamoDB (NoSQL)
+# Lesson 8 DynamoDB (NoSQL)
 Learning objectives
 Understanding DynamoDB
 Exploring DDB data models
@@ -59,7 +59,7 @@ Securing DynamoDB
 Scaling and replication
 Understanding streams and triggers
 Using DynamoDB best practices
-# Lesson 9: Simple Storage Service (S3)
+# Lesson 9 Simple Storage Service (S3)
 Learning objectives
 Understanding S3
 Creating buckets
@@ -70,15 +70,15 @@ Exploring events
 Using third-party browser tools
 Using S3 best practices
 Using CloudFront with S3
-# Lesson 10: Route 53 DNS
+# Lesson 10 Route 53 DNS
 Learning objectives
 Understanding Route 53
 Exploring Route 53 zones
 Using zone aliases
 Configuring traffic flow policies
 Using Route 53 best practices
-# Lesson 11: Simple Queue Service (SQS)
-Module 4: Messaging services introduction
+# Lesson 11 Simple Queue Service (SQS)
+Module 4 Messaging services introduction
 Learning objectives
 Understanding SQS
 Creating an SQS queue
@@ -86,7 +86,7 @@ Securing SQS
 Interacting with an SQS queue
 Using message encryption
 Using SQS best practices
-# Lesson 12: Simple Notification Service (SNS)
+# Lesson 12 Simple Notification Service (SNS)
 Learning objectives
 An SNS overview
 Exploring SNS transports
@@ -94,14 +94,14 @@ Understanding SNS message reliability
 Using SNS platform applications
 Emailing and texting using SNS
 Using SNS best practices
-# Lesson 13: Simple Email Service (SES)
+# Lesson 13 Simple Email Service (SES)
 Learning objectives
 Understanding SES
 Using the SES simulator
 Using SES templates
 Using SES best practices
-# Lesson 14: Lambda – Serverless Compute
-Module 5: Execution services introduction
+# Lesson 14 Lambda – Serverless Compute
+Module 5 Execution services introduction
 Learning objectives
 Highlighting Lambda
 Understanding Lambda scalability and availability
@@ -109,20 +109,20 @@ Exploring Lambda security
 Using Lambda functions
 Deploying a Lambda function
 Using Lambda best practices
-# Lesson 15: Elastic Beanstalk
+# Lesson 15 Elastic Beanstalk
 Learning objectives
 Understanding Elastic Beanstalk
 Development stacks
 Interacting with databases
 Updating the platform
 Using Elastic Beanstalk best practices
-# Lesson 16: Kinesis
+# Lesson 16 Kinesis
 Learning objectives
 Understanding Kinesis
 Exploring streams
 Using Firehose
 Using Kinesis best practices
-# Lesson 17: API Gateway
+# Lesson 17 API Gateway
 Learning objectives
 An API Gateway overview
 Creation from template
@@ -130,40 +130,40 @@ Using Lambda integrations
 Integrating using HTTP
 Securing an API Gateway
 Using API Gateway best practices
-# Lesson 18: AWS API
-Module 6: Developing in AWS introduction
+# Lesson 18 AWS API
+Module 6 Developing in AWS introduction
 Learning objectives
 An AWS API overview
 Using the AWS API
 3m video
-# Lesson 19: AWS SDK
+# Lesson 19 AWS SDK
 Learning objectives
 Understanding the AWS SDKs
 Finding documentation
 Using the Node.js SDK
 Using the Python SDK
-# Lesson 20: CloudFormation
+# Lesson 20 CloudFormation
 Learning objectives
 Understanding CloudFormation
 Using templates
 Using CloudFormation best practices
-# Lesson 21: CloudWatch
+# Lesson 21 CloudWatch
 Learning objectives
 Understanding CloudWatch
 Exploring logs
 Understanding alarms
 Using insights
 Using EventBridge
-# Lesson 22: Elastic Container Service (ECS)
+# Lesson 22 Elastic Container Service (ECS)
 Learning objectives
 Understanding ECS
 Exploring the Elastic Container Registry
 Using clusters
 Using ECS best practices
-# Lesson 23: AWS Developer Tools
+# Lesson 23 AWS Developer Tools
 Learning objectives
 Outlining AWS developer tools
 Experimenting with AWS developer tools
 Exploring X-Ray
 # Conclusion
-Hands-on development in AWS: Summary
+Hands-on development in AWS Summary

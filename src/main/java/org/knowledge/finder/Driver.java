@@ -12,7 +12,7 @@ public class Driver {
 		String inputFile = "webpage.txt";
 		String outputFile = "context.md";
 
-		String projectName = "Use For Development";
+		String projectName = "Hands On Development in AWS";
 		
 		String lessonFolderName = "LESSON_";
 
