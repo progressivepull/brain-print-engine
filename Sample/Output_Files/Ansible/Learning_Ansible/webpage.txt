@@ -1,0 +1,28 @@
+# Introduction
+Learning Ansible
+What you should know
+# 1. Ansible Foundations
+What is Ansible
+Ansible architecture
+Ansible core community and Navigator
+What are execution environments
+# 2. Ansible Base Components
+Playbooks
+Playbook components
+Inventories
+# 3. Install Ansible
+Install Ansible on Linux
+# 4. Create Your First Ansible Playbook
+Choose your editor
+First playbook
+Create inventory
+Key versus password authentication
+Run a playbook
+# 5. Ansible Use Cases
+Information gathering via facts
+Simple config management
+Idempotence
+Using variables conditionals and loops
+AWX and derivatives
+# Conclusion
+Continue with an Ansible advanced course

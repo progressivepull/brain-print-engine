@@ -1,0 +1,84 @@
+# Introduction
+Learning Ansible
+What you should know
+# 1. Ansible Foundations
+What is Ansible?(Viewed)
+2m 30s video
+Save
+•	
+Ansible architecture(Viewed)
+1m 34s video
+Save
+•	
+Ansible core, community, and Navigator(Viewed)
+1m 59s video
+Save
+•	
+What are execution environments?(Viewed)
+1m 38s video
+Save
+2. Ansible Base Components
+•	
+Playbooks(Viewed)
+1m 24s video
+Save
+•	
+Playbook components(Viewed)
+3m 2s video
+Save
+•	
+Inventories(Viewed)
+3m 56s video
+Save
+3. Install Ansible
+•	
+Install Ansible on Linux(Viewed)
+1m 53s video
+Save
+4. Create Your First Ansible Playbook
+•	
+Choose your editor(Viewed)
+3m 14s video
+Save
+•	
+First playbook(Viewed)
+3m 50s video
+Save
+•	
+Create inventory(Viewed)
+3m 17s video
+Save
+•	
+Key versus password authentication(Viewed)
+3m 2s video
+Save
+•	
+Run a playbook(Viewed)
+3m 39s video
+Save
+5. Ansible Use Cases
+•	
+Information gathering via facts(In progress)
+5m 14s video
+Save
+•	
+Simple config management
+5m 39s video
+Save
+•	
+Idempotence
+3m 55s video
+Save
+•	
+Using variables, conditionals, and loops
+5m 19s video
+Save
+•	
+AWX and derivatives
+3m 2s video
+Save
+Conclusion
+•	
+Continue with an Ansible advanced course
+1m video
+Save
