@@ -12,7 +12,7 @@ public class Driver {
 		String inputFile = "webpage.txt";
 		String outputFile = "context.md";
 
-		String projectName = "AI Solutions Developer";
+		String projectName = "The_Science_of_Judgment_Evaluating_Artificial_Intelligence";
 		
 		String lessonFolderName = "LESSON_";
 
@@ -28,4 +28,6 @@ public class Driver {
 	}
 
 }
+
+
 
