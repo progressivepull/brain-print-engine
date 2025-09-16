@@ -12,7 +12,7 @@ public class Driver {
 		String inputFile = "webpage.txt";
 		String outputFile = "context.md";
 
-		String projectName = "Learning_Ansible";
+		String projectName = "AI Solutions Developer";
 		
 		String lessonFolderName = "LESSON_";
 
