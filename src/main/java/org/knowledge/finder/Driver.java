@@ -32,6 +32,16 @@ import org.knowledge.finder.generate.ManagerGenerate;
  * <p><strong>Version:</strong> 1.0</p>
  */
 public class Driver {
+    /**
+     * Default constructor for {@code Driver}.
+     * <p>
+     * This constructor is not intended to be used directly, as the class is designed
+     * to operate via its static {@code main} method only.
+     * </p>
+     */
+    public Driver() {
+        // No initialization required
+    }
 
     /**
      * Main method and the starting point of the application.

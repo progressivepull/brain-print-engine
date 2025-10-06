@@ -25,11 +25,10 @@ import org.knowledge.finder.data.LessonsData;
  *   <li>Subdirectories for each lesson section.</li>
  *   <li>Individual markdown files for each subsection of a lesson.</li>
  * </ul>
- * </p>
  * <p>
  * This class uses {@link LessonsData} to manage lessons and section headings,
  * and handles all I/O operations required for file and directory creation.
- * </p>
+ * 
  */
 public class ContextGenerate {
 
