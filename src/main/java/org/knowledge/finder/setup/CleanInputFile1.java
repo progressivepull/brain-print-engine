@@ -38,6 +38,17 @@ import java.io.IOException;
 public class CleanInputFile1 {
 
     /**
+     * Default constructor for {@code CleanInputFile1}.
+     * <p>
+     * This constructor is not intended to be used directly, as the class is designed
+     * to operate via its static {@code main} method only.
+     * </p>
+     */
+    public CleanInputFile1() {
+        // No initialization required
+    }
+
+    /**
      * Entry point for the file cleaning utility.
      * <p>
      * Reads from {@code "webpage-unclean.txt"}, filters out unwanted lines,
