@@ -133,7 +133,13 @@ public class LessonsData {
      * </ul>
      */
     public enum DecimalPoint {
+        /**
+         * Increment section number, reset subsection to 1.
+         */
         WHOLE,
+        /**
+         * Increment subsection number only.
+         */
         DECIMAL
     }
 
@@ -206,10 +212,21 @@ public class LessonsData {
         this.isNewSection = isNewSection;
     }
     
-    /** @return map of section titles */
+    /**
+     * Returns the mapping of section numbers to their corresponding formatted titles.
+     * Each entry represents a major section in the project.
+     *
+     * @return map of section titles
+     */
     public Map<Integer, String> getTitles() { return titles; }
     
-    /** @return map of lessons (subsection → lesson text) */
+    /**
+     * Returns the mapping of subsection identifiers to their lesson content.
+     * Keys follow a hierarchical format (e.g., "1.1", "2.3") representing
+     * the subsection's position, and values contain the associated lesson text.
+     *
+     * @return map of lessons (subsection → lesson text)
+     */
     public Map<String, String> getLessons() { return lessons; }
 
     /**
