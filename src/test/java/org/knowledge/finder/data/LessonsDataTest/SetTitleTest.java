@@ -9,15 +9,32 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Map;
 
+/**
+ * Unit tests for the {@link LessonsData} class focusing on the setTitle functionality.
+ * <p>
+ * This class verifies correct section incrementing, title formatting, and flag setting
+ * when using the setTitle method.
+ */
 public class SetTitleTest {
 	
 	private LessonsData data;
 	
+    /**
+     * Initializes a new {@link LessonsData} instance before each test.
+     */
     @BeforeEach
     public void setUp() {
     	data = new LessonsData("TEST_FILES");
     }
     
+    /**
+     * Default constructor for SetTitleTest.
+     * <p>
+     * No special initialization is required.
+     */
+    public SetTitleTest() {
+        // Default constructor
+    }
     
     /**
      * Tests the {@code setTitle} method of the {@code data} object to ensure it:
