@@ -140,7 +140,11 @@ public class LessonsData {
         /**
          * Increment subsection number only.
          */
-        DECIMAL
+        DECIMAL,
+        /**
+		 * When you want to update both the whole and decimal values from the subSection, but not return any value.
+		 */
+        RETURN_NOTHING
     }
 
     /**
@@ -272,19 +276,35 @@ public class LessonsData {
 
 
 
+
     /**
-     * Parses the current subsection string (e.g., "2.3") into {@code whole} and {@code decimal}.
-     * Splits on the dot and updates the fields.
-     */
-    private void splitSubSection() {
+	 * Splits the current subsection string into its whole and decimal parts.
+	 * <p>
+	 * The subsection is expected to be in the format "X.Y", where:
+	 * <ul>
+	 *   <li><strong>X</strong> is the whole part (section number)</li>
+	 *   <li><strong>Y</strong> is the decimal part (lesson index)</li>
+	 * </ul>
+	 * This method parses these parts and updates the internal {@code whole} and {@code decimal} fields.
+	 *
+	 * @param decimalPoint specifies which part to return: WHOLE, DECIMAL, or RETURN_NOTHING
+	 * @return the requested part as an integer, or -1 if RETURN_NOTHING is specified
+	 */
+    public int splitSubSection(DecimalPoint decimalPoint) {
         String[] parts = subSection.split("\\.");
         if (parts.length == 2) {
             whole = Integer.parseInt(parts[0]);
             decimal = Integer.parseInt(parts[1]);
         } else {
-            System.out.println("Input not in expected format."); 
-            // ⚠️ Better: throw IllegalArgumentException instead of printing
+            throw new IllegalArgumentException("subSection is not in expected format: " + subSection);
         }
+        
+        if (decimalPoint == DecimalPoint.WHOLE) {
+            return whole;
+        } else if (decimalPoint == DecimalPoint.DECIMAL) {
+            return decimal;
+        }
+        return -1;
     }
 
     /**
@@ -293,7 +313,7 @@ public class LessonsData {
      * @param decimalPoint specifies whether to increment section (WHOLE) or subsection (DECIMAL)
      */
     private void increaseSubSection(DecimalPoint decimalPoint) {
-    	splitSubSection();
+    	splitSubSection(DecimalPoint.RETURN_NOTHING);
 
         if (decimalPoint == DecimalPoint.DECIMAL) {
             // Just increase subsection (e.g., 1.1 → 1.2)
