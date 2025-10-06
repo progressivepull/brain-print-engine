@@ -53,6 +53,14 @@ public class MatchVideoDuration {
 
 ```
 
+## Git Comments
+``` bash
+cd /C/Users/cocon/.ssh
+
+ssh-keygen -t ed25519 -C "progressivepull@gmail.com"
+
+eval "$(ssh-agent -s)"
+```
 
 
 
