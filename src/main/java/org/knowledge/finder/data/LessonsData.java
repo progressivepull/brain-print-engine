@@ -325,7 +325,7 @@ public class LessonsData {
             whole++;
             decimal = 1;
         } else {
-            // ⚠️ Consider throwing IllegalArgumentException
+        	throw new IllegalArgumentException("subSection is not in expected format: " + subSection);
         }
 
         // Update subsection string
