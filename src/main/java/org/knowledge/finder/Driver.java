@@ -3,74 +3,86 @@ package org.knowledge.finder;
 import org.knowledge.finder.generate.ManagerGenerate;
 
 /**
- * The {@code Driver} class serves as the entry point for the application.
+ * The {@code Driver} class serves as the entry point for the Knowledge Finder application.
  * <p>
- * It initializes project configuration parameters such as input files,
- * output files, project names, lesson folder structure, and archive settings.
- * Then, it creates an instance of {@link ManagerGenerate} to process
- * lessons and context files.
+ * This constructor is not used directly, as the class is designed to run via its {@code main} method.
+ * 
+ * It configures the environment for lesson and context generation by defining input/output files,
+ * project metadata, folder naming conventions, and archival settings. Once configured, it delegates
+ * the processing workflow to an instance of {@link ManagerGenerate}.
  * </p>
  *
- * <h2>Workflow:</h2>
+ * <h2>Workflow Overview:</h2>
  * <ol>
- *   <li>Defines archive files and target archive directory.</li>
- *   <li>Sets input/output files for lesson processing.</li>
- *   <li>Configures project name and lesson folder naming convention.</li>
- *   <li>Specifies hyperlink reference to the context file.</li>
- *   <li>Creates {@link ManagerGenerate} instance and invokes {@code process()}.</li>
+ *   <li>Define files to be archived after processing.</li>
+ *   <li>Specify input and output files for lesson and context generation.</li>
+ *   <li>Set project name and lesson folder naming prefix.</li>
+ *   <li>Provide hyperlink reference to the context file for use in generated lessons.</li>
+ *   <li>Instantiate {@link ManagerGenerate} with all parameters.</li>
+ *   <li>Invoke {@code process()} to execute the full generation and archival pipeline.</li>
  * </ol>
  *
  * <p>
  * This class demonstrates a typical use case of the system:
- * reading from an input file, generating lessons and context,
- * and organizing files into structured directories.
+ * reading structured content from an input file, generating lesson folders and markdown files,
+ * linking them to a shared context, and archiving relevant artifacts.
  * </p>
  *
- * @author 
- * @version 1.0
+ * <p><strong>Author:</strong> John Smith</p>
+ * <p><strong>Version:</strong> 1.0</p>
  */
 public class Driver {
 
     /**
      * Main method and the starting point of the application.
+     * <p>
+     * This method sets up all required configuration parameters and triggers the generation process.
+     * Command-line arguments are currently unused but reserved for future extensibility.
+     * </p>
      *
      * @param args Command-line arguments (not used in this implementation).
      */
     public static void main(String[] args) {
 
-        // List of files that should be archived after processing
-        String[] archivefiles = { "conversion.log", "context.md", "application.log" };
+        
+
+        // Files to be archived after processing (e.g., logs and context)
+        String[] archivefiles = {
+            "conversion.log",
+            "context.md",
+            "application.log"
+        };
 
         // Directory where archived files will be stored
         String archiveDir = "archive";
 
-        // Input text file containing lesson or webpage content
+        // Input file containing raw lesson or webpage content
         String inputFile = "webpage.txt";
 
         // Output file where processed context will be written
         String outputFile = "context.md";
 
-        // Project name (used as root directory for generated content)
+        // Project name used as the root directory for generated content
         String projectName = "AI_Solutions_Developer";
 
-        // Prefix for naming lesson folders
+        // Prefix for naming lesson folders (e.g., LESSON_1, LESSON_2)
         String lessonFolderName = "LESSON_";
 
-        // Hyperlink reference to the context file (used inside generated lesson markdown files)
+        // Hyperlink reference to the context file (used in generated lesson markdown files)
         String contextHyperLink = "## [Context](./../context.md)";
 
-        // Create an instance of ManagerGenerate with configured parameters
+        // Instantiate ManagerGenerate with all configuration parameters
         ManagerGenerate contextGenerate = new ManagerGenerate(
-                archivefiles,       // Files to be archived
-                archiveDir,         // Archive directory
-                inputFile,          // Input file
-                outputFile,         // Output file
-                projectName,        // Project name
-                lessonFolderName,   // Lesson folder prefix
-                contextHyperLink    // Hyperlink to context
+            archivefiles,
+            archiveDir,
+            inputFile,
+            outputFile,
+            projectName,
+            lessonFolderName,
+            contextHyperLink
         );
 
-        // Start the process: generate context, lessons, folders, and archive files
+        // Execute the full generation pipeline: context, lessons, folders, and archiving
         contextGenerate.process();
     }
 }
