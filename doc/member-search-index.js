@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"org.knowledge.finder.setup","c":"CleanInputFile1","l":"CleanInputFile1()","u":"%3Cinit%3E()"},{"p":"org.knowledge.finder.setup","c":"CleanInputFile1","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
+memberSearchIndex = [{"p":"org.knowledge.finder.setup","c":"CleanInputFile2","l":"CleanInputFile2()","u":"%3Cinit%3E()"},{"p":"org.knowledge.finder.setup","c":"CleanInputFile2","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

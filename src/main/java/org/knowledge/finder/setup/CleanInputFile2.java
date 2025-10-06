@@ -46,6 +46,17 @@ import java.util.regex.*;
 public class CleanInputFile2 {
 
     /**
+     * Default constructor for {@code CleanInputFile2}.
+     * <p>
+     * This constructor is not intended to be used directly, as the class is designed
+     * to operate via its static {@code main} method only.
+     * </p>
+     */
+    public CleanInputFile2() {
+        // No initialization required
+    }
+
+    /**
      * Entry point for the file cleaning utility.
      * <p>
      * Reads from {@code "webpage-unclean.txt"}, applies regex-based filtering,
