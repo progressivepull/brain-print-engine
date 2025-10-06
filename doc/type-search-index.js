@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.knowledge.finder.regular.expression","l":"MatchVideoDuration"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.knowledge.finder.regular.expression","l":"RegexExtract"}];updateSearchResults();
