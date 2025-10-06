@@ -76,34 +76,74 @@ public class ContextGenerate {
         this.contextLinkPage = contextLinkPage;
     }
 
-    /** @return the input file name */
+    /**
+     * Retrieves the name of the input file containing raw lesson content.
+     *
+     * @return the input file name
+     */
     public String getInputFileName() { return inputFileName; }
 
-    /** @param inputFileName the input file name to set */
+    /**
+     * Sets the name of the input file to be used for lesson content.
+     *
+     * @param inputFileName the input file name to set
+     */
     public void setInputFileName(String inputFileName) { this.inputFileName = inputFileName; }
 
-    /** @return the output file name */
+    /**
+     * Retrieves the name of the output file for processed content.
+     *
+     * @return the output file name
+     */
     public String getOutputFileName() { return outputFileName; }
 
-    /** @param outputFileName the output file name to set */
+    /**
+     * Sets the name of the output file for processed content.
+     *
+     * @param outputFileName the output file name to set
+     */
     public void setOutputFileName(String outputFileName) { this.outputFileName = outputFileName; }
 
-    /** @return the project name */
+    /**
+     * Retrieves the name of the project, which is also used as the root directory name.
+     *
+     * @return the project name
+     */
     public String getProjectName() { return projectName; }
 
-    /** @param projectName the project name to set */
+    /**
+     * Sets the name of the project and root directory.
+     *
+     * @param projectName the project name to set
+     */
     public void setProjectName(String projectName) { this.projectName = projectName; }
 
-    /** @return the project directory path */
+    /**
+     * Retrieves the path object representing the project directory.
+     *
+     * @return the project directory path
+     */
     public Path getDirectoryProject() { return directoryProject; }
 
-    /** @param directoryProject the project directory to set */
+    /**
+     * Sets the path object for the project directory.
+     *
+     * @param directoryProject the project directory to set
+     */
     public void setDirectoryProject(Path directoryProject) { this.directoryProject = directoryProject; }
 
-    /** @return the lessons data object */
+    /**
+     * Retrieves the LessonsData object holding parsed lesson titles and subsections.
+     *
+     * @return the lessons data object
+     */
     public LessonsData getLessonsData() { return lessonsData; }
 
-    /** @param lessonsData the lessons data to set */
+    /**
+     * Sets the LessonsData object to store processed lessons and titles.
+     *
+     * @param lessonsData the lessons data to set
+     */
     public void setLessonsData(LessonsData lessonsData) { this.lessonsData = lessonsData; }
 
     /**
