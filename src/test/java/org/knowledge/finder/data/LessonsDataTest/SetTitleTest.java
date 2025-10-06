@@ -82,20 +82,28 @@ public class SetTitleTest {
      */
     @Test
     public void testSetTitleMultipleCalls() {
+        // Add first title; expected to be stored as "# 1. Overview"
         data.setTitle("# Overview");
+
+        // Add second title; expected to be stored as "# 2. Details"
         data.setTitle("# Details");
 
+        // Retrieve and print the size of the titles map for manual inspection
         int size = data.getTitles().size();
         System.out.println("Size of the Title map: " + size);
 
+        // Assert that two titles have been added
         assertEquals(2, data.getTitles().size());
 
+        // Print and verify the first title is correctly numbered and formatted
         System.out.println("Element 1 of the Title map is : " + data.getTitles().get(1));
         assertEquals("# 1. Overview", data.getTitles().get(1));
 
+        // Print and verify the second title is correctly numbered and formatted
         System.out.println("Element 2 of the Title map is : " + data.getTitles().get(2));
         assertEquals("# 2. Details", data.getTitles().get(2));
     }
+
 
 	
 	
