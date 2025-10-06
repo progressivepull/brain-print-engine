@@ -191,10 +191,11 @@ public class ContextGenerate {
             
             lessonsData.printTitles();
             lessonsData.printLessons();
-            lessonsData.printLessonsCount();
-
+            
             // Finalize lessons data (internally organizes it)
             lessonsData.done();
+            
+            lessonsData.printLessonsCount();
 
             // Step 3: Write structured headings and lessons into context.md
             for (int sectionNumber = 1; sectionNumber < lessonsData.getLessonsCount().size(); sectionNumber++) {

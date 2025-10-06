@@ -336,7 +336,7 @@ public class LessonsData {
      * Marks the end of lesson input and finalizes the last section's lesson count.
      */
     public void done() {
-        lessonsCount.put(whole, decimal - 1);
+        lessonsCount.put(whole, decimal -1);
     }
 
     /**
