@@ -63,7 +63,7 @@ public class Driver {
         String outputFile = "context.md";
 
         // Project name used as the root directory for generated content
-        String projectName = "AI_Solutions_Developer";
+        String projectName = "TEST_FILES";
 
         // Prefix for naming lesson folders (e.g., LESSON_1, LESSON_2)
         String lessonFolderName = "LESSON_";

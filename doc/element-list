@@ -1,6 +1,2 @@
-org.knowledge.finder
 org.knowledge.finder.data
 org.knowledge.finder.data.LessonsDataTest
-org.knowledge.finder.generate
-org.knowledge.finder.regular.expression
-org.knowledge.finder.setup

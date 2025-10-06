@@ -47,7 +47,7 @@ public class SetTitleTest {
         assertEquals("# 1. Introduction", titles.get(1));
 
         // Verify isNewSection flag
-        assertTrue(data.isNewSection());
+        assertTrue(data.getIsNewSection());
     }
 
     /**

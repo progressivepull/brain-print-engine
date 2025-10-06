@@ -83,6 +83,39 @@ public class LessonsData {
 	 * this value helps organize content hierarchically by major section.
 	 */
 	private int whole;
+	
+	
+
+	/**
+	 * Retrieves the current subsection identifier.
+	 * <p>
+	 * The subsection is typically formatted as "X.Y", where:
+	 * <ul>
+	 *   <li><strong>X</strong> represents the section number</li>
+	 *   <li><strong>Y</strong> represents the lesson index within that section</li>
+	 * </ul>
+	 * This value is used to organize lesson content hierarchically.
+	 *
+	 * @return the current subsection string (e.g., "2.3")
+	 */
+	public String getSubSection() {
+	    return subSection;
+	}
+
+	/**
+	 * Sets the current subsection identifier.
+	 * <p>
+	 * The expected format is "X.Y", where X is the section number and Y is the lesson index.
+	 * This method updates the internal pointer used for lesson organization.
+	 *
+	 * @param subSection the subsection string to set (e.g., "3.1")
+	 */
+	public void setSubSection(String subSection) {
+	    this.subSection = subSection;
+	}
+	
+	
+
 
 	/**
 	 * Represents the fractional part of the current subsection identifier.
@@ -159,24 +192,32 @@ public class LessonsData {
      *
      * @return {@code true} if a new section was added; {@code false} otherwise
      */
-    public boolean isNewSection() {
+    public boolean getIsNewSection() {
         return isNewSection;
     }
+    
 
     /**
      * Sets the flag indicating whether a new section was recently added.
      *
      * @param isNewSection {@code true} to mark a new section; {@code false} otherwise
      */
-    public void setNewSection(boolean isNewSection) {
+    public void setIsNewSection(boolean isNewSection) {
         this.isNewSection = isNewSection;
     }
-
+    
+    /** @return map of section titles */
+    public Map<Integer, String> getTitles() { return titles; }
+    
+    /** @return map of lessons (subsection → lesson text) */
+    public Map<String, String> getLessons() { return lessons; }
 
     /**
      * Adds a new section title.
      * <p>
      * Automatically increments the section number and prefixes the title with it.
+     * <p>
+     * Takes <b>titleSection</b> changes to "# 1. Introduction" by adding "1."
      *
      * @param titleSection raw section title (e.g., "# Introduction")
      */
@@ -188,8 +229,7 @@ public class LessonsData {
         isNewSection = true;
     }
 
-    /** @return map of section titles */
-    public Map<Integer, String> getTitles() { return titles; }
+
 
     /**
      * Adds a lesson entry under the current section.
@@ -213,14 +253,13 @@ public class LessonsData {
         increaseSubSection(DecimalPoint.DECIMAL);
     }
 
-    /** @return map of lessons (subsection → lesson text) */
-    public Map<String, String> getLessons() { return lessons; }
+
 
     /**
      * Parses the current subsection string (e.g., "2.3") into {@code whole} and {@code decimal}.
      * Splits on the dot and updates the fields.
      */
-    private void getSubSection() {
+    private void splitSubSection() {
         String[] parts = subSection.split("\\.");
         if (parts.length == 2) {
             whole = Integer.parseInt(parts[0]);
@@ -237,7 +276,7 @@ public class LessonsData {
      * @param decimalPoint specifies whether to increment section (WHOLE) or subsection (DECIMAL)
      */
     private void increaseSubSection(DecimalPoint decimalPoint) {
-        getSubSection();
+    	splitSubSection();
 
         if (decimalPoint == DecimalPoint.DECIMAL) {
             // Just increase subsection (e.g., 1.1 → 1.2)

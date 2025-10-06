@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.knowledge.finder.data.LessonsDataTest"},{"l":"org.knowledge.finder.generate"},{"l":"org.knowledge.finder.regular.expression"},{"l":"org.knowledge.finder.setup"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.knowledge.finder.data.LessonsDataTest"}];updateSearchResults();
