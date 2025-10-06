@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"org.knowledge.finder.regular.expression","c":"RegexExtract","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"org.knowledge.finder.regular.expression","c":"RegexExtract","l":"RegexExtract()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{"p":"org.knowledge.finder.regular.expression","c":"VideoDurationMatcher","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"org.knowledge.finder.regular.expression","c":"VideoDurationMatcher","l":"VideoDurationMatcher()","u":"%3Cinit%3E()"}];updateSearchResults();
