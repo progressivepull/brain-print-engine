@@ -45,7 +45,10 @@ public class LessonsData {
     /** Indicates whether a new section was just added. */
     boolean isNewSection = false;
 
-    /** Stores the number of lessons per section (section → count). */
+    public boolean isNewSection() {return isNewSection;}
+	public void setNewSection(boolean isNewSection) {this.isNewSection = isNewSection;}
+
+	/** Stores the number of lessons per section (section → count). */
     private Map<Integer, Integer> lessonsCount = new HashMap<>();
 
     /** Current "whole" section number parsed from subsection. */
@@ -98,7 +101,7 @@ public class LessonsData {
         section++;
         // Add section number before the title
         String title = sanitize(titleSection).replace("#", "# " + section + ".");
-        titles.put(section, title);
+        titles.put(section, title.replace("_", " "));
         isNewSection = true;
     }
 
@@ -198,7 +201,7 @@ public class LessonsData {
     public void printTitles() {
         System.out.println("TITLES _________________");
         for (Map.Entry<Integer, String> entry : titles.entrySet()) {
-            System.out.println(entry.getKey() + ":" + entry.getValue());
+            System.out.println("KEY[" + entry.getKey() + "]: VALUE " + entry.getValue());
         }
     }
 
@@ -208,7 +211,7 @@ public class LessonsData {
     public void printLessons() {
         System.out.println("LESSONS _________________");
         for (Map.Entry<String, String> entry : lessons.entrySet()) {
-            System.out.println(entry.getKey() + ":" + entry.getValue());
+            System.out.println("KEY[" + entry.getKey() + "]: VALUE " + entry.getValue());
         }
     }
 
@@ -219,7 +222,7 @@ public class LessonsData {
         System.out.println("LESSONS COUNT _________________");
         for (Map.Entry<Integer, Integer> entry : lessonsCount.entrySet()) {
             if (entry.getKey() > 0) {
-                System.out.println(entry.getKey() + ":" + entry.getValue());
+                System.out.println("KEY[" + entry.getKey() + "]:  VALUE " + entry.getValue());
             }
         }
     }

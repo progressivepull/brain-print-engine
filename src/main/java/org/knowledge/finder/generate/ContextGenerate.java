@@ -141,18 +141,25 @@ public class ContextGenerate {
             String line;
             while ((line = reader.readLine()) != null) {
                 // Headings are treated as section titles, others as lesson entries
+            	//System.out.println(line);
+            	
                 if (isSectionHeading(line)) {
                     lessonsData.setTitle(line);
                 } else {
                     lessonsData.setLessons(line);
                 }
             }
+            
+            lessonsData.printTitles();
+            lessonsData.printLessons();
+            lessonsData.printLessonsCount();
 
             // Finalize lessons data (internally organizes it)
             lessonsData.done();
 
             // Step 3: Write structured headings and lessons into context.md
             for (int sectionNumber = 1; sectionNumber < lessonsData.getLessonsCount().size(); sectionNumber++) {
+            	//System.out.println("Section Number : " + sectionNumber);
                 handleHeading(writer, sectionNumber);
                 handleLesson(writer, sectionNumber);
             }
@@ -205,7 +212,11 @@ public class ContextGenerate {
      */
     public void handleLesson(BufferedWriter writer, Integer sectionNumber) throws IOException {
         // Get number of subsections under this section
+    	
+    	//System.out.println("______________Section Number_______________" + sectionNumber);
         int subSectionCount = lessonsData.getLessonsCount().get(sectionNumber);
+        
+        //System.out.println("Sub Section Count : " + subSectionCount);
 
         // For each subsection, generate a markdown link
         for (int subSectionNumber = 1; subSectionNumber < subSectionCount; subSectionNumber++) {
