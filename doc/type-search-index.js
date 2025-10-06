@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.knowledge.finder.setup","l":"CleanInputFile2"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.knowledge.finder.data.LessonsDataTest","l":"SetLessonsTest"}];updateSearchResults();

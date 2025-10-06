@@ -1,1 +1,1 @@
-tagSearchIndex = [{"l":"Filtering Rules:","h":"class org.knowledge.finder.setup.CleanInputFile2","d":"Section","u":"org/knowledge/finder/setup/CleanInputFile2.html#filtering-rules--heading"},{"l":"Use Case:","h":"class org.knowledge.finder.setup.CleanInputFile2","d":"Section","u":"org/knowledge/finder/setup/CleanInputFile2.html#use-case--heading"}];updateSearchResults();
+tagSearchIndex = [];updateSearchResults();
