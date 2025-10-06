@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.knowledge.finder.generate","l":"ContextGenerate"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.knowledge.finder.generate","l":"ManagerGenerate"}];updateSearchResults();
