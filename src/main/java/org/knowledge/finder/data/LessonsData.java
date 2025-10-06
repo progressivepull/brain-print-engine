@@ -149,7 +149,7 @@ public class LessonsData {
      * @param projectName the name of the project (will be sanitized)
      */
     public LessonsData(String projectName) {
-        this.projectName = sanitize(projectName);
+        this.projectName = replaceSpacesWithUnderline(projectName);
     }
 
     /**
@@ -189,7 +189,7 @@ public class LessonsData {
      * @param projectName the raw project name to sanitize and store
      */
     public void setProjectName(String projectName) {
-        this.projectName = sanitize(projectName);
+        this.projectName = replaceSpacesWithUnderline(projectName);
     }
 
     /**
@@ -241,8 +241,8 @@ public class LessonsData {
     public void setTitle(String titleSection) {
         section++;
         // Add section number before the title
-        String title = sanitize(titleSection).replace("#", "# " + section + ".");
-        titles.put(section, title.replace("_", " "));
+        String title = titleSection.replace("#", "# " + section + ".");
+        titles.put(section, title);
         isNewSection = true;
     }
 
@@ -263,7 +263,7 @@ public class LessonsData {
         }
 
         // Format lesson with subsection numbering
-        String lesson = subSection + " " + sanitize(lessonContent);
+        String lesson = subSection + " " + replaceSpacesWithUnderline(lessonContent);
         lessons.put(subSection, lesson);
 
         // Increment for next lesson (X.Y+1)
@@ -320,19 +320,36 @@ public class LessonsData {
     }
 
     /**
-     * Sanitizes a string by:
+     * Replace spaces with underline in a string by:
      * <ul>
-     *   <li>Replacing spaces with underscores</li>
+     *   <li>Replacing spaces with underline</li>
      *   <li>Trimming whitespace</li>
      *   <li>Handling null inputs safely</li>
      * </ul>
      *
      * @param input raw string
-     * @return sanitized string
+     * @return string with underline replacing the spaces in the string
      */
-    private String sanitize(String input) {
-        return input == null ? "" : input.trim().replace(" ", "_");
-    }
+	
+	public String replaceSpacesWithUnderline(String input) { 
+		  return input == null ? "" :input.trim().replace(" ", "_"); 
+	}
+	
+	/**
+	 * Replace underscores with spaces in a string by:
+	 * <ul>
+	 *   <li>Replacing underscores with spaces</li>
+	 *   <li>Trimming leading and trailing whitespace</li>
+	 *   <li>Handling null inputs safely</li>
+	 * </ul>
+	 *
+	 * @param input raw string
+	 * @return string with spaces replacing the underscores in the string
+	 */
+	public String replaceUnderlineWithSpaces(String input) {
+	    return input == null ? "" : input.trim().replace("_", " ");
+	}
+	 
 
     /**
      * Prints section titles to the console (for debugging).

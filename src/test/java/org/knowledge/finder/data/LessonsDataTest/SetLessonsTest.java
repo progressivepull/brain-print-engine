@@ -9,6 +9,12 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the {@link LessonsData} class focusing on lesson insertion and section management.
+ * <p>
+ * This test class verifies the correct behavior of lesson storage, subsection incrementing,
+ * and section state transitions when interacting with the LessonsData API.
+ */
 public class SetLessonsTest {
 	
 	private LessonsData data;
@@ -31,6 +37,15 @@ public class SetLessonsTest {
 	    data.setSubSection("1.0"); // assuming setter exists or default value
 	    data.setIsNewSection(true); // assuming setter exists
 	}
+
+    /**
+     * Default constructor for SetLessonsTest.
+     * <p>
+     * This constructor is provided for test instantiation purposes. No custom initialization is required.
+     */
+    public SetLessonsTest() {
+        // Default constructor for JUnit test class
+    }
 
     
     /**
