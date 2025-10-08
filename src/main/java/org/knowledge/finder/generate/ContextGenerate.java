@@ -253,23 +253,39 @@ public class ContextGenerate {
     public void handleLesson(BufferedWriter writer, Integer sectionNumber) throws IOException {
         // Get number of subsections under this section
     	
-    	//System.out.println("______________Section Number_______________" + sectionNumber);
+    	System.out.println("______________Section Number_______________" + sectionNumber);
         int subSectionCount = lessonsData.getLessonsCount().get(sectionNumber);
         
         //System.out.println("Sub Section Count : " + subSectionCount);
 
         // For each subsection, generate a markdown link
-        for (int subSectionNumber = 1; subSectionNumber < subSectionCount; subSectionNumber++) {
-            String line = lessonsData.getLessons().get(sectionNumber + "." + subSectionNumber);
-
-            // Convert lesson name to a markdown link
-            String markDownLine = "* [ " + line.replace("_", " ") + " ]( ./"
-                    + lessonFolderName + sectionNumber + "/" + line.replace(" ", "_") + ".md )";
-
+        for (int subSectionNumber = 1; subSectionNumber <= subSectionCount; subSectionNumber++) {
+        	
+        	System.out.println("Sub Section Number : " + subSectionNumber);
+        	
             // Write the link into context.md
-            writer.write(markDownLine + "\n \r");
+            writer.write(handleLessonHandler(sectionNumber,subSectionNumber) + "\n \r");
         }
     }
+    
+    /**
+	 * Generates a markdown link for a specific lesson subsection.
+	 * @param sectionNumber    the section number
+	 * @param subSectionNumber the subsection number
+	 * @return a formatted markdown link string
+	 */
+    public String handleLessonHandler(Integer sectionNumber,Integer subSectionNumber) {
+        String line = lessonsData.getLessons().get(sectionNumber + "." + subSectionNumber);
+
+        // Convert lesson name to a markdown link
+        String markDownLine = "* [ " + line.replace("_", " ") + " ]( ./"
+                + lessonFolderName + sectionNumber + "/" + line.replace(" ", "_") + ".md )";
+        
+        return markDownLine;
+    }
+    
+    
+    
 
     /**
      * Creates subfolders for each lesson section and generates individual
