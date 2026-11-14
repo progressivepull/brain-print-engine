@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.knowledge.finder.data.LessonsData;
+import org.knowledge.finder.utilities.StringUtility;
 
 /**
  * The {@code ContextGenerate} class is responsible for generating a structured
@@ -279,7 +280,7 @@ public class ContextGenerate {
 
         // Convert lesson name to a markdown link
         String markDownLine = "* [ " + line.replace("_", " ") + " ]( ./"
-                + lessonFolderName + sectionNumber + "/" + line.replace(" ", "_") + ".md )";
+                + lessonFolderName + sectionNumber + "/" + line.replace(" ", "_")+ "/" + line.replace(" ", "_") + ".md )";
         
         return markDownLine;
     }
@@ -295,39 +296,64 @@ public class ContextGenerate {
      * </p>
      */
     public void createSubfoldersAndMarkdownFiles() {
-        for (String folderName : folderNamesList) {
-            Path subfolderPath = directoryProject.resolve(folderName);
 
-            try {
-                // Create subdirectory for lesson section
-                Files.createDirectories(subfolderPath);
-
-                // Determine which section this folder corresponds to
-                int sectionNumber = Integer.parseInt(folderName.replace(this.lessonFolderName, ""));
-                int subSectionCount = lessonsData.getLessonsCount().get(sectionNumber);
-
-                // For each subsection, create a markdown file
-                for (int subSectionNumber = 1; subSectionNumber <= subSectionCount; subSectionNumber++) {
-                    String line = lessonsData.getLessons().get(sectionNumber + "." + subSectionNumber);
-
-                    // Build filename (spaces replaced with underscores)
-                    String fileName = line.replace(" ", "_") + ".md";
-                    Path markdownFilePath = subfolderPath.resolve(fileName);
-
-                    // Content of each markdown file
-                    String fileContent = "# " + line.replace("_", " ") + " \n \r \n \r " + contextLinkPage;
-
-                    // Write content into markdown file
-                    try (BufferedWriter writer = new BufferedWriter(new FileWriter(markdownFilePath.toFile()))) {
-                        writer.write(fileContent);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+			for (String folderName : folderNamesList) {
+			
+			    // Remove special characters
+			    folderName = StringUtility.removeSpecialCharacters(folderName);
+			
+			    // Extract section number from folder name (e.g., LESSON1 -> 1)
+			    String sectionNumberText = folderName.replace(this.lessonFolderName, "");
+			
+			    int sectionNumber = Integer.parseInt(
+			        sectionNumberText.replaceAll("[^0-9]", "")
+			    );
+			
+			    Path subfolderPath = directoryProject.resolve(folderName);
+			
+			    try {
+			
+			        // Create subdirectory for lesson section
+			        Files.createDirectories(subfolderPath);
+			
+			        // Get subsection count
+			        int subSectionCount = lessonsData.getLessonsCount().get(sectionNumber);
+			
+			        // Create a markdown file for each subsection
+			        for (int subSectionNumber = 1;
+			             subSectionNumber <= subSectionCount;
+			             subSectionNumber++) {
+			
+			            String lessonKey = sectionNumber + "." + subSectionNumber;
+			
+			            String line = lessonsData.getLessons().get(lessonKey);
+			
+			            if (line == null) {
+			                continue;
+			            }
+			
+			            // Build filename (spaces replaced with underscores)
+			            String fileName = line.replace(" ", "_") + ".md";
+			
+			            Path markdownFilePath = subfolderPath.resolve(StringUtility.removeSpecialCharacters(fileName) );
+			
+			            // Build markdown content
+			            String fileContent = "# " + line.replace("_", " ")
+			                    + "\n\n"
+			                    + contextLinkPage;
+			
+			            // Write markdown file
+			            try (BufferedWriter writer = Files.newBufferedWriter(markdownFilePath)) {
+			                writer.write(fileContent);
+			            } catch (IOException e) {
+			                e.printStackTrace();
+			            }
+			        }
+			
+			    } catch (IOException e) {
+			        e.printStackTrace();
+			    }
+			}
     }
+
 }
