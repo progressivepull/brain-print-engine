@@ -1,0 +1,30 @@
+# Overview: Kubernetes Package Management with Helm
+What is Helm?
+Helm in real life
+Install Helm
+Tour the Helm command line tool
+Chapter Quiz
+# Install and Configure a Chart from the Artifact Hub
+Explore the Artifact Hub
+Install a Helm chart in your Kubernetes cluster
+Get information about your chart with the Helm show command
+Upgrade your Helm chart
+Challenge: Install the kube-prometheus-stack Helm chart
+Solution: Install the kube-prometheus-stack Helm chart
+Chapter Quiz
+# Deploy a Custom Application Using Helm
+Create a new Helm chart from the command line
+Explore the Helm chart directories and files
+Deploy and update Kubernetes ConfigMap via Helm
+Deploy and update a Kubernetes secret via Helm
+Rollback a Helm release
+Chapter Quiz
+# Experiment with Helm's Advanced Features
+Render a ConfigMap value dynamically with Helm templating
+Using the values.yaml file
+Dynamically render a value with a Helm conditional statement
+Challenge: Dynamically generate multiple versions of a ConfigMap
+Solution: Dynamically generate multiple versions of a ConfigMap
+Chapter Quiz
+# Conclusion
+Next steps with Helm

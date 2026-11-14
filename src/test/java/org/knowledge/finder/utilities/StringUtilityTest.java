@@ -51,14 +51,6 @@ class StringUtilityTest {
                 StringUtility.removeSpecialCharacters(input));
     }
 
-    @Test
-    void shouldPreserveAllowedCharactersAndRemoveSpecialCharacters() {
-        String input = "LESSON 1.1 - Java_Spring & Boot!";
-        String expected = "LESSON 1.1  Java_Spring  Boot";
-
-        assertEquals(expected,
-                StringUtility.removeSpecialCharacters(input));
-    }
 
     @Test
     void shouldReturnEmptyStringWhenInputContainsOnlySpecialCharacters() {
@@ -73,5 +65,15 @@ class StringUtilityTest {
         assertEquals("",
                 StringUtility.removeSpecialCharacters(""));
     }
+    
+    @Test
+    void shouldKeepHyphens() {
+        String input = "LESSON-1 - Java-Spring-Boot";
+        String expected = "LESSON-1 - Java-Spring-Boot";
+
+        assertEquals(expected,
+                StringUtility.removeSpecialCharacters(input));
+    }
+    
 }
 

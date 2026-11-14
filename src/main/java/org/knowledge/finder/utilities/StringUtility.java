@@ -7,7 +7,7 @@ public class StringUtility {
 	        return null;
 	    }
 
-	    return input.replaceAll("[^a-zA-Z0-9 ._]", "");
+	    return input.replaceAll("[^a-zA-Z0-9 ._-]", "");
 	}
 
 }
