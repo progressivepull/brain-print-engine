@@ -1,30 +1,128 @@
-# Overview: Kubernetes Package Management with Helm
-What is Helm?
-Helm in real life
-Install Helm
-Tour the Helm command line tool
+# Introduction
+Kafka course introduction 
+Apache Kafka in five minutes 
+Course objectives 
 Chapter Quiz
-# Install and Configure a Chart from the Artifact Hub
-Explore the Artifact Hub
-Install a Helm chart in your Kubernetes cluster
-Get information about your chart with the Helm show command
-Upgrade your Helm chart
-Challenge: Install the kube-prometheus-stack Helm chart
-Solution: Install the kube-prometheus-stack Helm chart
+# 1. Kafka Theory
+Topics partitions and offsets 
+Producers and message keys 
+Consumers and deserialization 
+Consumer groups and consumer offsets 
+Brokers and topics 
+Topic replication 
+Producer acknowledgments and topic durability 
+ZooKeeper 
+Kafka KRaft- Removing ZooKeeper 
+Theory roundup 
 Chapter Quiz
-# Deploy a Custom Application Using Helm
-Create a new Helm chart from the command line
-Explore the Helm chart directories and files
-Deploy and update Kubernetes ConfigMap via Helm
-Deploy and update a Kubernetes secret via Helm
-Rollback a Helm release
+# 2. Starting Kafka
+Important- Starting Kafka and lectures order
+Starting Kafka with Conduktor- Multi-platform
+macOS X- Download and set up Kafka in PATH
+macOS X- Start Kafka in KRaft mode
+macOS X- Using brew
+Linux- Download and set up Kafka in PATH
+Linux- Start Kafka in KRaft mode
+Windows WSL2- WSL2 Setup
+Windows WSL2- Download Kafka and PATH setup
+Windows WSL2- Start Kafka in KRaft mode
+Windows WSL2- How to fix problems
 Chapter Quiz
-# Experiment with Helm's Advanced Features
-Render a ConfigMap value dynamically with Helm templating
-Using the values.yaml file
-Dynamically render a value with a Helm conditional statement
-Challenge: Dynamically generate multiple versions of a ConfigMap
-Solution: Dynamically generate multiple versions of a ConfigMap
+# 3. CLI Command-Line Interface 101
+CLI introduction 
+Kafka topics CLI 
+Kafka console producer CLI 
+Kafka console consumer CLI 
+Kafka consumers in groups 
+Kafka consumer groups CLI 
+Resetting offsets 
 Chapter Quiz
-# Conclusion
-Next steps with Helm
+# 4. Kafka UI
+Conduktor- Demo
+# 5. Kafka Java Programming 101
+Kafka SDK list 
+Creating a Kafka project 
+Java producer 
+Java producer callbacks 
+Java producer with keys 
+Java consumer 
+Java consumer- Graceful shutdown 
+Java consumer inside consumer group 
+Java consumer rebalance and static group membership 
+Java consumer incremental cooperative rebalance 
+Java consumer auto offset commit behavior 
+Programming- Advanced tutorials 
+Chapter Quiz
+# 6. Kafka Real-World Project
+Real-world project overview
+# 7. Kafka Wikimedia Producer Configurations
+Wikimedia producer project setup 
+Wikimedia producer implementation 
+Wikimedia producer run 
+Wikimedia producer- Producer config intros 
+Producer acknowledgments deep dive 
+Producer retries 
+Idempotent producer 
+Safe Kafka producer settings 
+Wikimedia producer safe producer implementation 
+Kafka message compression 
+linger.ms and batch.size producer settings 
+Wikimedia producer high-throughput implementation 
+Producer default partitioner and sticky partitioner 
+Advanced max block ms and buffer memory 
+Chapter Quiz
+# 8. OpenSearch Consumer Configurations	
+OpenSearch consumer- Project overview 
+OpenSearch consumer- Project setup 
+Setting up OpenSearch on Docker 
+Setting up OpenSearch on the Cloud 
+OpenSearch 101 
+OpenSearch consumer imple- Part 1 
+OpenSearch consumer imple- Part 2 
+Consumer delivery semantics 
+OpenSearch consumer implementation- Part 3 idempot 
+Consumer offsets commit strategies 
+OpenSearch consumer imple- Part 4 delivery semantics 
+OpenSearch consumer imple- Part 5 batching data 
+Consumer offset reset behavior 
+OpenSearch consumer implementation- Part 6 replaying 
+Consumer internal threads 
+Consumer replica fetching- Rack awareness 
+Chapter Quiz
+# 9. Kafka Extended APIs for Developers
+Kafka extended APIs- Overview 
+Kafka Connect introduction 
+Kafka Connect Wikimedia and Elasticsearch hands-on 
+Kafka Streams introduction 
+Kafka Streams hands-on 
+Kafka Schema Registry introduction 
+Kafka Schema Registry hands-on 
+Which Kafka API should you use? 
+Chapter Quiz
+# 10. Real-World Case Studies- Big and Fast Data	
+Choosing partition count and replication factor 
+Kafka topics naming convention 
+Case study- MovieFlix 
+Case study- GetTaxi 
+Case study- MySocialMedia 
+Case study- MyBank 
+Case study- Big data ingestion 
+Case study- Logging and metrics aggregation 
+Chapter Quiz
+# 11. Kafka in the Enterprise for Admins	
+Kafka cluster setup high-level architecture overview 
+Kafka monitoring and operations 
+Kafka security 
+Kafka multi-cluster and MirrorMaker 
+Advertised listeners-client and_server protocol
+Chapter Quiz
+# 12. Advanced Topics Configurations	
+Changing a topic configuration 
+Segment and indexes 
+Log cleanup policies 
+Log cleanup delete 
+Log compaction theory 
+Log compaction practice 
+Unclean leader election 
+Large messages in Kafka 
+Chapter Quiz

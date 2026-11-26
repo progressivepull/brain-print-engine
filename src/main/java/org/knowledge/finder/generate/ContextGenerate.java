@@ -173,9 +173,11 @@ public class ContextGenerate {
 
         // Path of the main context.md file
         Path contextFile = directoryProject.resolve("context.md");
+        
+        System.out.println(this.inputFileName);
 
         // Step 2: Read input file and populate LessonsData
-        try (BufferedReader reader = new BufferedReader(new FileReader(this.inputFileName));
+        try (BufferedReader reader = new BufferedReader(new FileReader( StringUtility.removeSpecialCharacters(this.inputFileName) ));
              BufferedWriter writer = new BufferedWriter(new FileWriter(contextFile.toFile()))) {
 
             String line;
@@ -335,7 +337,20 @@ public class ContextGenerate {
 			            // Build filename (spaces replaced with underscores)
 			            String fileName = line.replace(" ", "_") + ".md";
 			
-			            Path markdownFilePath = subfolderPath.resolve(StringUtility.removeSpecialCharacters(fileName) );
+			            
+			            // Clean filename
+			           String cleanFileName = StringUtility.removeSpecialCharacters(fileName);
+
+			           // Remove .md extension for folder name
+			           cleanFileName = cleanFileName.replaceFirst("\\.md$", "");
+
+			           // Create folder using filename without .md
+			           Path markdownFolderPath = subfolderPath.resolve(cleanFileName);
+
+			           Files.createDirectories(markdownFolderPath);
+
+			           // Put Markdown file inside the newly created folder
+			           Path markdownFilePath = markdownFolderPath.resolve(StringUtility.removeSpecialCharacters(fileName)) ;
 			
 			            // Build markdown content
 			            String fileContent = "# " + line.replace("_", " ")

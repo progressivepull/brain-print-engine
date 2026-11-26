@@ -1,4 +1,0 @@
-Introduction
-Manage Kubernetes workloads with Helm
-What you should know
-Using the exercise files

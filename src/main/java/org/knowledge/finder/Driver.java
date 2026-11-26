@@ -73,13 +73,13 @@ public class Driver {
         String outputFile = "context.md";
 
         // Project name used as the root directory for generated content
-        String projectName = "TEST_FILES";
+        String projectName = "Complete_Guide_to_Apache_Kafka_for_Beginners";
 
         // Prefix for naming lesson folders (e.g., LESSON_1, LESSON_2)
         String lessonFolderName = "LESSON_";
 
         // Hyperlink reference to the context file (used in generated lesson markdown files)
-        String contextHyperLink = "## [Context](./../context.md)";
+        String contextHyperLink = "## [Context](./../../context.md)";
 
         // Instantiate ManagerGenerate with all configuration parameters
         ManagerGenerate contextGenerate = new ManagerGenerate(
